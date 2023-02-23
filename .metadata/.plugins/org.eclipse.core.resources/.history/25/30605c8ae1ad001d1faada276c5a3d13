@@ -1,0 +1,5 @@
+package com.te.employeeservice.dto;
+
+public class AddressInfoDto {
+
+}

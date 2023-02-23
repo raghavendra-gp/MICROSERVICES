@@ -1,0 +1,23 @@
+package com.te.employeeservice.entity;
+
+public class AddressInfo {
+	
+	private Integer addressId;
+
+	private String doorNo;
+
+	private String street;
+
+	private String locality;
+
+	private String city;
+
+	private Integer pincode;
+
+	private String landmark;
+
+	private String state;
+
+	private String addressType;
+
+}

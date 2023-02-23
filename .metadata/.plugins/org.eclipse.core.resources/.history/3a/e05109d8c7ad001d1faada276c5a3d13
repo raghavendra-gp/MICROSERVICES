@@ -1,0 +1,5 @@
+package com.te.employeeservice.entity;
+
+public class SecondaryInfo {
+
+}

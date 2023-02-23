@@ -1,0 +1,16 @@
+package com.te.employeeservice.entity;
+
+import java.time.LocalDate;
+
+public class ExperienceInfo {
+
+	private Integer experienceId;
+
+	private String companyName;
+
+	private Integer yearsOfExperience;
+	private LocalDate dataOfJoining;
+	private LocalDate dataOfRelieving;
+	private String designation;
+	private String location;
+}

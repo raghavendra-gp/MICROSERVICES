@@ -1,0 +1,22 @@
+package com.te.adminservice.dto;
+
+import java.time.LocalDate;
+import java.util.List;
+
+import javax.persistence.Convert;
+
+import com.te.adminservice.util.ListToStringConverter;
+
+public class BatchDto {
+
+	private Integer batchDetailNumber;
+	private Integer batchId;
+	private String batchName;
+	private String mentorName;
+
+	@Convert(converter = ListToStringConverter.class)
+	private List<String> technologies;
+	private LocalDate startDate;
+	private LocalDate endDate;
+	private String status;
+}

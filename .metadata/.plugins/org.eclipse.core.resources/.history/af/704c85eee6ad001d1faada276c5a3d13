@@ -1,0 +1,26 @@
+package com.te.employeeservice.service;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.stereotype.Service;
+
+import com.te.employeeservice.dto.EmployeeDto;
+import com.te.employeeservice.entity.PrimaryInfo;
+import com.te.employeeservice.repository.EmployeeRepository;
+
+import lombok.RequiredArgsConstructor;
+
+@Service
+@RequiredArgsConstructor
+public class EmployeeServiceImpl implements EmployeeService {
+	
+	private final EmployeeRepository employeeRepository;
+	private final ModelMapper modelMapper;
+
+	@Override
+	public void register(EmployeeDto employeeDto) {
+		PrimaryInfo info = new PrimaryInfo();
+		modelMapper.map(employeeDto, info);
+		return employeeRepository.save(info).getEmpId();
+	}
+
+}

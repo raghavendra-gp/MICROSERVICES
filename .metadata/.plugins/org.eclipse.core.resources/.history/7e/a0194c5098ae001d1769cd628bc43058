@@ -1,0 +1,5 @@
+package com.te.employeeservice.feign;
+
+public interface UserFeignClient {
+
+}

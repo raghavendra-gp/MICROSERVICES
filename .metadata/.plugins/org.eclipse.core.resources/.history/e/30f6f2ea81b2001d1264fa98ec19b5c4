@@ -1,0 +1,5 @@
+package com.te.adminservice.dto;
+
+public class BatchDto {
+
+}

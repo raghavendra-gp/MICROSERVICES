@@ -1,0 +1,21 @@
+package com.te.adminservice.entity;
+
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+public class Mentor {
+
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Id
+	private Integer mentorId;
+	private String password;
+	private String mentorName;
+	private String employeeId;
+	@Email
+	private String email;
+	@Convert(converter = ListToStringConverter.class)
+	private List<String> skills;
+	@ManyToMany(fetch = FetchType.LAZY,mappedBy = "mentors")
+	private List<BatchDetail> batchDetailList = Lists.newArrayList();
+}

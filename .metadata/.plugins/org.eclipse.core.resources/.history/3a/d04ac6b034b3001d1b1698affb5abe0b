@@ -1,0 +1,17 @@
+package com.te.adminservice.dto;
+
+public class BatchDto {
+
+	private Integer batchDetailNumber;
+	private Integer batchId;
+	private String batchName;
+	private String mentorName;
+	@Convert(converter = ListToStringConverter.class)
+	private List<String> technologies;
+	@JsonFormat(pattern = "MM-dd-yyyy", shape = JsonFormat.Shape.STRING )
+	private LocalDate startDate;
+	@JsonFormat(pattern = "MM-dd-yyyy", shape = JsonFormat.Shape.STRING )
+	private LocalDate endDate;
+	@Enumerated(EnumType.STRING)
+	private BatchStatus status;
+}

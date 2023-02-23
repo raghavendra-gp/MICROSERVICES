@@ -1,0 +1,9 @@
+package com.te.adminservice.dto;
+
+public class MentorDto {
+
+	private String mentorName;
+	private Integer empId;
+	private String email;
+	private Set<TechnologyModel> technologies;
+}

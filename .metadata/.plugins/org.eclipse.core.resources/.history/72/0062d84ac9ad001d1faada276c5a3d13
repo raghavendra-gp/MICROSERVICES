@@ -1,0 +1,14 @@
+package com.te.employeeservice.entity;
+
+public class ExperienceInfo {
+
+	private Integer experienceId;
+
+	private String companyName;
+
+	private YearsOfExperience yearsOfExperience;
+	private LocalDate dataOfJoining;
+	private LocalDate dataOfRelieving;
+	private String designation;
+	private String location;
+}

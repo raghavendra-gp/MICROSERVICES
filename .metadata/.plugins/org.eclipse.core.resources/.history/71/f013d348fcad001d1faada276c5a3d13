@@ -1,0 +1,19 @@
+package com.te.employeeservice.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+import com.te.employeeservice.service.EmployeeService;
+
+import lombok.RequiredArgsConstructor;
+
+@RestController
+@RequiredArgsConstructor
+public class EmployeeController {
+	
+	private final EmployeeService employeeService;
+	
+
+	public ResponseEntity<AppResponse> () {
+		
+	}
+}

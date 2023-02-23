@@ -1,0 +1,24 @@
+package com.te.adminservice.entity;
+
+import java.time.LocalDate;
+import java.util.List;
+
+import javax.persistence.Convert;
+
+import com.te.adminservice.util.ListToStringConverter;
+
+import lombok.Getter;
+
+@Getter
+public class Batch {
+
+	
+	private Integer batchId;
+	private String batchName;
+	private String mentorName;
+	@Convert(converter = ListToStringConverter.class)
+	private List<String> technologies;
+	private LocalDate batchStartDate;
+	private LocalDate batchEndDate;
+	private String status;
+}

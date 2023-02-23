@@ -1,0 +1,42 @@
+package com.te.adminservice.service;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.stereotype.Service;
+
+import com.te.adminservice.dto.BatchDto;
+import com.te.adminservice.dto.MentorDto;
+import com.te.adminservice.entity.Batch;
+import com.te.adminservice.entity.Mentor;
+import com.te.adminservice.repository.BatchRepository;
+import com.te.adminservice.repository.MentorRepository;
+
+import lombok.RequiredArgsConstructor;
+
+@Service
+@RequiredArgsConstructor
+public class AdminServiceImpl implements AdminService {
+	
+	private final BatchRepository batchRepository;
+	private final ModelMapper modelMapper;
+	private final MentorRepository mentorRepository;
+	
+	@Override
+	public BatchDto saveBatch(BatchDto batchDto) {
+		
+		Batch batch = new Batch();
+		modelMapper.map(batchDto, batch);
+		batchRepository.save(batch);
+		return batchDto;
+	}
+
+	@Override
+	public MentorDto saveMentor(MentorDto mentorDto) {
+		Mentor mentor = new Mentor();
+		modelMapper.map(mentorDto, mentor);
+		
+		mentorRepository.save(mentor);
+		return mentorDto;
+		
+	}
+
+}

@@ -1,0 +1,21 @@
+package com.te.adminservice.service;
+
+import org.springframework.stereotype.Service;
+
+import com.te.adminservice.dto.BatchDto;
+import com.te.adminservice.repository.BatchRepository;
+
+import lombok.RequiredArgsConstructor;
+
+@Service
+@RequiredArgsConstructor
+public class AdminServiceImpl implements AdminService {
+	
+	private final BatchRepository batchRepository;
+
+	@Override
+	public void saveBatch(BatchDto batchDto) {
+		
+	}
+
+}

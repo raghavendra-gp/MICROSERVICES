@@ -1,0 +1,12 @@
+package com.te.adminservice.service;
+
+import com.te.adminservice.dto.BatchDto;
+import com.te.adminservice.dto.MentorDto;
+
+public interface AdminService {
+
+	BatchDto saveBatch(BatchDto batchDto);
+
+	void saveMentor(MentorDto mentorDto);
+
+}

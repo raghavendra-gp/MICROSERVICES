@@ -1,0 +1,48 @@
+package com.te.adminservice.entity;
+
+import java.time.LocalDate;
+import java.util.List;
+
+import javax.persistence.Convert;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+import com.te.adminservice.util.ListToStringConverter;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
+public class Batch {
+
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Id
+	private Integer batchId;
+	private String batchName;
+	private String mentorName;
+
+	@Convert(converter = ListToStringConverter.class)
+	private List<String> technologies;
+
+	private LocalDate startDate;
+	
+	private LocalDate endDate;
+
+	private String status;
+
+	@ManyToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+	@JoinTable(name = "batch_mentor",joinColumns = { @JoinColumn(name = "batch_id",referencedColumnName = "batchDetailNumber")},
+	inverseJoinColumns = {@JoinColumn(name = "mentor_id",referencedColumnName = "mentorNumber" )})
+	private List<Mentor> mentors=Lists.newArrayList();
+
+	@Convert(converter = ListToStringConverter.class)
+	private List<String> employeeId;
+}

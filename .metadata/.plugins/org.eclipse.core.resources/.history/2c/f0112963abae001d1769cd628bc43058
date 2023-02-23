@@ -1,0 +1,24 @@
+package com.te.employeeservice.service;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+
+import com.te.employeeservice.feign.UserFeignClient;
+import com.te.employeeservice.response.AppResponse;
+
+import lombok.RequiredArgsConstructor;
+
+@Service
+@RequiredArgsConstructor
+public class EmployeeServiceImpl implements EmployeeService {
+	
+	private final UserFeignClient userFeignClient;
+
+	@Override
+	public void getEmpDet(Integer empId) {
+		
+		ResponseEntity<AppResponse> findByEmpId = userFeignClient.findByEmpId(empId);
+		
+	}
+
+}

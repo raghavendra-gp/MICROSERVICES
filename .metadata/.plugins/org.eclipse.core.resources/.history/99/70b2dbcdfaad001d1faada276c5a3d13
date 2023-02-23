@@ -1,0 +1,5 @@
+package com.te.employeeservice.response;
+
+public class AppResponse {
+
+}

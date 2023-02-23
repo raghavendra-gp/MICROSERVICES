@@ -1,0 +1,9 @@
+package com.te.employeeservice.service;
+
+import com.te.employeeservice.dto.EmployeeDto;
+
+public interface EmployeeService {
+
+	void register(EmployeeDto employeeDto);
+
+}

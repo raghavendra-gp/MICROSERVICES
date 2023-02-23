@@ -1,0 +1,51 @@
+package com.te.employeeservice.service;
+
+import java.util.List;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.stereotype.Service;
+
+import com.te.employeeservice.controller.UserController;
+import com.te.employeeservice.dto.EmployeeDto;
+import com.te.employeeservice.entity.PrimaryInfo;
+import com.te.employeeservice.repository.UserRepository;
+
+import lombok.RequiredArgsConstructor;
+
+@Service
+@RequiredArgsConstructor
+public class UserServiceImpl implements UserService {
+	
+	
+	
+	
+	UserController controller = new UserController(null);
+	
+	private final UserRepository userRepository;
+	private final ModelMapper modelMapper;
+
+	@Override
+	public Integer register(EmployeeDto employeeDto) {
+		PrimaryInfo info = new PrimaryInfo();
+		modelMapper.map(employeeDto, info);
+		return userRepository.save(info).getEmpId();
+	}
+
+	@Override
+	public List<PrimaryInfo> getEmpDet(Integer empId) {
+		return userRepository.findByEmpId(empId);
+	}
+
+	@Override
+	public EmployeeDto updateEmpDetails(Integer empId, EmployeeDto employeeDto) {
+		PrimaryInfo primaryInfo = userRepository.findById(empId).get();
+		
+		if (primaryInfo != null) {
+			modelMapper.map(employeeDto, primaryInfo);
+			userRepository.save(primaryInfo);
+			return employeeDto;
+		}
+		return null;
+	}
+
+}

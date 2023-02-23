@@ -1,0 +1,16 @@
+package com.te.employeeservice.entity;
+
+public class BankInfo {
+
+	private Long accountNo;
+
+	private String bankName;
+
+	private String accountType;
+
+	private String ifsc;
+
+	private String branch;
+
+	private String state;
+}

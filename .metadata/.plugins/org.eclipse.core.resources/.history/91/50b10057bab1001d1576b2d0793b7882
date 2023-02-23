@@ -1,0 +1,5 @@
+package com.te.adminservice.entity;
+
+public class Batch {
+
+}

@@ -1,0 +1,5 @@
+package com.te.adminservice.util;
+
+public class ListToStringConverter {
+
+}

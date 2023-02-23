@@ -1,0 +1,74 @@
+package com.te.employeeservice.entity;
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+
+import org.apache.tomcat.jni.Address;
+import org.springframework.lang.Nullable;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
+public class PrimaryInfo {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer empId;
+	private String empName;
+	private String email;
+	private LocalDate dateOfBirth;
+	private LocalDate dateOfJoining;
+	private String designation;
+	private String nationality;
+	private String gender;
+	private String bloodGroup;
+	private String degree;
+	private String status;
+	
+	@OneToOne(cascade = CascadeType.ALL)
+	private SecondaryInfo secondaryInfo;
+
+	@OneToMany(cascade = CascadeType.ALL)
+	private List<EducationalInfo> educationDetails = new ArrayList<>();
+
+	@OneToMany(cascade = CascadeType.ALL)
+	private List<AddressInfo> address;
+
+	@OneToMany(mappedBy = "employee", cascade = CascadeType.ALL)
+	private List<MockDetails> mockDetails = new ArrayList<>();
+
+	// @NotNull(message = "NULL data passed for bankDetails")
+	@OneToOne(cascade = CascadeType.ALL)
+	private BankDetails bankDetails;
+
+	@NotNull(message = "NULL data passed for technicalSkill")
+	@OneToMany(cascade = CascadeType.ALL)
+	private Set<TechnicalSkill> technicalSkill = new HashSet<>();
+
+	@Nullable
+	@OneToMany(cascade = CascadeType.ALL)
+	private List<Experience> experience = new ArrayList<>();
+
+	@NotNull(message = "NULL data passed for contacts")
+	@OneToMany(cascade = CascadeType.ALL)
+	private List<Contact> contacts = new ArrayList<>();
+
+}

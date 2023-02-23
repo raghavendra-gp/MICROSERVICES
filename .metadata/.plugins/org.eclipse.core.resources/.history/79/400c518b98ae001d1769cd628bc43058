@@ -1,0 +1,20 @@
+package com.te.employeeservice.service;
+
+import org.springframework.stereotype.Service;
+
+import com.te.employeeservice.feign.UserFeignClient;
+
+import lombok.RequiredArgsConstructor;
+
+@Service
+@RequiredArgsConstructor
+public class EmployeeServiceImpl implements EmployeeService {
+	
+	private final UserFeignClient userFeignClient 
+
+	@Override
+	public void getEmpDet(Integer empId) {
+		
+	}
+
+}

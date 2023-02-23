@@ -1,0 +1,14 @@
+package com.te.employeeservice.entity;
+
+public class EducationalInfo {
+
+	private Integer educationId;
+	private String educationType;
+	private Integer yearOfPassing;
+	private Double percentage;
+	private String universityName;
+	private String instituteName;
+	private String specialization;
+	private String state;
+
+}

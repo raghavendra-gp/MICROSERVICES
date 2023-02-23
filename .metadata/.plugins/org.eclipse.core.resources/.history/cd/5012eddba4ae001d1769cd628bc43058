@@ -1,0 +1,11 @@
+package com.te.employeeservice.service;
+
+import com.te.employeeservice.dto.EmployeeDto;
+
+public interface UserService {
+
+	Integer register(EmployeeDto employeeDto);
+
+	void getEmpDet(Integer empId);
+
+}

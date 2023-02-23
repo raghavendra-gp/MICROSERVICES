@@ -1,0 +1,15 @@
+package com.te.employeeservice.feign;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.http.ResponseEntity;
+
+import com.te.employeeservice.response.AppResponse;
+
+@FeignClient(value = "user-client", url = "http://localhost:8761/user-service/")
+public interface UserFeignClient {
+	
+	
+	@GetMapping("/{employeeId}")
+	public ResponseEntity<AppResponse> findByEmployeeId(@PathVariable String employeeId);
+
+}

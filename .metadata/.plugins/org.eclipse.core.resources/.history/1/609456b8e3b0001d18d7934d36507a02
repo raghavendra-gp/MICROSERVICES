@@ -1,0 +1,18 @@
+package com.te.employeeservice;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.context.annotation.ComponentScan;
+
+@SpringBootApplication
+@EnableFeignClients
+@ComponentScan("com.te.employeeservice")
+public class EmployeeServiceApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(EmployeeServiceApplication.class, args);
+	}
+
+	
+}

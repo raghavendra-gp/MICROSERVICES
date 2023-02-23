@@ -1,0 +1,12 @@
+package com.te.employeeservice.entity;
+
+public class TechnicalSkillInfo {
+
+	private Integer skillId;
+
+	private String skillType;
+
+	private String skillRating;
+
+	private Integer yearOfExperienceOnSkill;
+}

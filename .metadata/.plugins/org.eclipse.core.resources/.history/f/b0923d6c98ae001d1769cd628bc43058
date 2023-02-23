@@ -1,0 +1,22 @@
+package com.te.employeeservice;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.openfeign.EnableFeignClients;
+
+import com.te.employeeservice.feign.UserFeignClient;
+
+import lombok.RequiredArgsConstructor;
+
+@SpringBootApplication
+@EnableFeignClients
+@RequiredArgsConstructor
+public class EmployeeServiceApplication {
+	
+	private final UserFeignClient userFeignClient;
+
+	public static void main(String[] args) {
+		SpringApplication.run(EmployeeServiceApplication.class, args);
+	}
+
+}

@@ -1,0 +1,9 @@
+package com.te.adminservice.service;
+
+import com.te.adminservice.dto.BatchDto;
+
+public interface AdminService {
+
+	void saveBatch(BatchDto batchDto);
+
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+    <typeInfo handle="=employee-service/C:\/Users\/ragha\/.m2\/repository\/org\/modelmapper\/modelmapper\/2.4.4\/modelmapper-2.4.4.jar=/maven.pomderived=/true=/=/maven.groupId=/org.modelmapper=/=/maven.artifactId=/modelmapper=/=/maven.version=/2.4.4=/=/maven.scope=/compile=/=/maven.pomderived=/true=/&lt;org.modelmapper(ModelMapper.class[ModelMapper" modifiers="33" timestamp="1676544188972"/>
+    <typeInfo handle="=user-service/C:\/Users\/ragha\/.m2\/repository\/org\/springframework\/data\/spring-data-jpa\/2.7.7\/spring-data-jpa-2.7.7.jar=/maven.pomderived=/true=/=/maven.groupId=/org.springframework.data=/=/maven.artifactId=/spring-data-jpa=/=/maven.version=/2.7.7=/=/maven.scope=/compile=/=/maven.pomderived=/true=/&lt;org.springframework.data.jpa.repository(JpaRepository.class[JpaRepository" modifiers="1537" timestamp="1675655557524"/>
+    <typeInfo handle="=admin-service/C:\/Users\/ragha\/Downloads\/sts-4.16.1.RELEASE\/plugins\/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.4.v20221004-1257\/jre\/lib\/jrt-fs.jar`java.base=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/17\/docs\/api\/=/=/maven.pomderived=/true=/&lt;java.lang(Runtime.class[Runtime" modifiers="33" timestamp="1669972174852"/>
+</typeInfoHistroy>

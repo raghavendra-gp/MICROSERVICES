@@ -1,0 +1,7 @@
+package com.te.employeeservice.service;
+
+public interface EmployeeService {
+
+	void getEmpDet(Integer empId);
+
+}

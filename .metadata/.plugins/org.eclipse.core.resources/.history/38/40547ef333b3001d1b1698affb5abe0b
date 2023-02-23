@@ -1,0 +1,5 @@
+package com.te.adminservice.service;
+
+public interface AdminService {
+
+}

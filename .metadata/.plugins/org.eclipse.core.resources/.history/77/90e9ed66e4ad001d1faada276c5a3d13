@@ -1,0 +1,10 @@
+package com.te.employeeservice.service;
+
+import javax.websocket.server.ServerEndpoint;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class EmployeeServiceImpl implements EmployeeService {
+
+}
